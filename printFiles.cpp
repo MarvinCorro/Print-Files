@@ -14,17 +14,18 @@
 //#include "stdafx.h"
 #include "wrapper.h"
 
-#include <crtdbg.h> 
+//#include <crtdbg.h> 
 
 #define TRUE 1
 #define FALSE 0
 #define SPECIAL_CHAR " %&*,.;!/=+-()[]{}\t\n#"
 #define QUIT_ "quit"
 
+/*
 #ifdef _MSC_VER
 #include <crtdbg.h>  // needed to check for memory leaks (Windows only!)
 #endif
-
+*/
 typedef struct queNode{
     int lineNumber;
     struct queNode *next;
@@ -61,10 +62,10 @@ int main()
    TREE = buildData(fp);
    outPutTreeData(TREE);
    TREE = DestroyTree(TREE);
-   #ifdef _MSC_VER
+/*   #ifdef _MSC_VER
    printf( _CrtDumpMemoryLeaks() ? "Memory Leak\n" : "No Memory Leak\n");
-   #endif
-   system("pause");
+   #endif */
+//   system("pause");
    return 0;
 }
 
